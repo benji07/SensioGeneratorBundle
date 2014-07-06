@@ -247,7 +247,7 @@ EOT
             $parts = explode('\\', $entity);
             $controller = array_pop($parts);
 
-            $ret = $routing->addAnnotationController($bundle->getName(), $controller, null);
+            $ret = $routing->addAnnotationController($bundle->getName(), $controller);
         }
     }
 

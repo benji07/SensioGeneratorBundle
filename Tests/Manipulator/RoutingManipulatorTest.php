@@ -20,7 +20,7 @@ DATA;
         file_put_contents($file, $routing);
 
         $manipulator = new RoutingManipulator($file);
-        $this->assertEquals(true, $manipulator->hasResourceInAnnotation('AcmeDemoBundle'));
+        $this->assertTrue($manipulator->hasResourceInAnnotation('AcmeDemoBundle'));
     }
 
     public function testHasResourceInAnnotationReturnFalseIfOnlyOneControllerDefined()
@@ -37,6 +37,6 @@ DATA;
         file_put_contents($file, $routing);
 
         $manipulator = new RoutingManipulator($file);
-        $this->assertEquals(false, $manipulator->hasResourceInAnnotation('AcmeDemoBundle'));
+        $this->assertFalse($manipulator->hasResourceInAnnotation('AcmeDemoBundle'));
     }
 }
